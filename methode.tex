@@ -48,3 +48,21 @@ Cepandant, on préfèrera toujours travailler sur la table des probabilités dé
 \]
 
 \subsection{Test d'indépendance}
+
+On souhaite dans un premier temps vérifier si les variables $V_1$ et $V_2$ sont indépendantes, ce qui est le cas si $\forall i, j, f_{ij} \approx f_{i,\bullet}f_{\bullet, j}$, on définit alors $\hat{f}_{ij} = f_{i,\bullet}f_{\bullet, j}$ la probabilité théorique sous l'hypothèse d'indépendance des variables. 
+De manière similaire, on définit $\hat{x}_{ij} = n\hat{f}_{ij}$ les données théoriques sous l'hypothèse d'indépendance. 
+
+On peut alors procéder au test d'indépendance $\chi^2$, qui consiste à:
+\begin{itemize}
+  \item Calculer la distance $\chi_{obs}^2 = \sum_{(i,j)} \frac{(x_{ij} - \hat{x}_{ij})^2}{\hat{x}_{ij}}$ 
+  \item Fixer une $p$-value (usuellement à $0.05$)
+  \item Calculer le degré de liberté $df = (I - 1)(J - 1)$ 
+  \item Déterminer $\chi_{critical}^2$ à l'aide d'un table 
+  \item Si $\chi_{obs}^2 \leq \chi_{critical}^2$ alors les variables sont indépendantes, sinon elles sont corrélées
+\end{itemize}
+
+\subsection{Diagonalisation}
+
+Maintenant que l'on a confirmé que les variables sont corrélées, nous pouvons utiliser une technique plus précise afin d'obtenir plus d'informations, à savoir ici la diagonaliser la matrice des probabilités.
+
+On suppose ici qu'étudier $F$ reviens à étudier $\tilde{F} = D_IFD_J$ avec $D_I = diag(\frac{1}{\sqrt{f_{1 \bullet}}}, \dots, \frac{1}{\sqrt{f_{I\bullet}}})$ et $D_J = diag(\frac{1}{\sqrt{f_{\bullet 1}}}, \dots, \frac{1}{\sqrt{f_{\bullet J}}})$
