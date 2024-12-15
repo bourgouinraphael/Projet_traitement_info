@@ -65,4 +65,9 @@ On peut alors procéder au test d'indépendance $\chi^2$, qui consiste à:
 
 Maintenant que l'on a confirmé que les variables sont corrélées, nous pouvons utiliser une technique plus précise afin d'obtenir plus d'informations, à savoir ici la diagonaliser la matrice des probabilités.
 
-On suppose ici qu'étudier $F$ reviens à étudier $\tilde{F} = D_IFD_J$ avec $D_I = diag(\frac{1}{\sqrt{f_{1 \bullet}}}, \dots, \frac{1}{\sqrt{f_{I\bullet}}})$ et $D_J = diag(\frac{1}{\sqrt{f_{\bullet 1}}}, \dots, \frac{1}{\sqrt{f_{\bullet J}}})$
+On suppose ici qu'étudier $F$ reviens à étudier $\tilde{F} = D_IFD_J$ avec $D_I = diag(\frac{1}{\sqrt{f_{1 \bullet}}}, \dots, \frac{1}{\sqrt{f_{I\bullet}}})$ et $D_J = diag(\frac{1}{\sqrt{f_{\bullet 1}}}, \dots, \frac{1}{\sqrt{f_{\bullet J}}})$.
+On réalisera 2 diagonalisations, une sur $\tilde{F}\tilde{F}^T$ pour étudier les lignes et une sur $\tilde{F}^T\tilde{F}$ pour étudier les colonnes.
+On représente ensuite chaque catégorie de $V_1$ et $V_2$ dans un cercle des corrélations à la manière de l'ACP.
+Une propriété importante ici est le fait que les valeurs propres issues des 2 diagonalisations sont identiques, ce qui va nous permettre de représenter sur le même cercle les 2 variables. Dans ce graphique, si une catégorie de $V_1$ et de $V_2$ sont proches tout en étant éloignées de l'origine, cela montrera une corrélation entre cess deux catégories.
+
+On pourra aussi calculer la contribution de chaque ligne/colonne dans les composantes principales afin de mieux interpréter les résultats.
