@@ -1,5 +1,5 @@
 L'Analyse Factorielle de Correspondance est une technique permettant d'analyser des données qualitatives. 
-Plus précisément, elle permet d'analyser les relations entre 2 variables qualitatives. Un représentation commune de ces données est la table de contingence, pour lequel un exemple est fourni dans la figure \ref{cont-table}. 
+Plus précisément, elle permet d'analyser les relations entre 2 variables qualitatives catégorielles. Un représentation commune de ces données est la table de contingence, pour lequel un exemple est fourni dans la figure \ref{cont-table}. 
 
 \begin{figure}[!h]
 \begin{center}
@@ -32,20 +32,17 @@ Plus précisément, elle permet d'analyser les relations entre 2 variables quali
 
 Dans la suite, on notera $n$ le nombre total d'instances, $V_1$ la première variable (de taille $I$), $V_2$ la seconde (de taille $J$) et $x_{ij}$ le nombre d'instances étant dans la catégorie $i$ de la variable $V_1$ et dans la catégorie $j$ de la variable $V_2$.
 On définit alors $X = (x_{ij})_{1 \leq i \leq I, 1 \leq j \leq J}$ la table de contingence. On peut alors parler des valeurs marginales des lignes et colonnes, dont les formules sont:
-\[
-  x_{i,\bullet} = \sum_{j=1}^J x_{ij} 
-\]
-\[
-  x_{\bullet, j} = \sum_{i=1}^I x_{ij}
-\]
+
+\begin{equation}
+  x_{i\bullet} = \sum_{j=1}^J x_{ij} \qquad 
+  x_{\bullet j} = \sum_{i=1}^I x_{ij}
+\end{equation}
 
 Cepandant, on préfèrera toujours travailler sur la table des probabilités définie par $f_{ij} = \frac{x_{ij}}{n}$, pour lesquelles on peut aussi définir les valeurs marginales avec: 
-\[
-  f_{i,\bullet} = \sum_{j=1}^J f_{ij}
-\]
-\[
-  f_{\bullet, j} = \sum_{i=1}^I f_{ij}
-\]
+\begin{equation}
+  f_{i\bullet} = \sum_{j=1}^J f_{ij} \qquad
+  f_{\bullet j} = \sum_{i=1}^I f_{ij}
+\end{equation}
 
 \subsection{Test d'indépendance}
 
