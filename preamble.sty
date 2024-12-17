@@ -1,3 +1,36 @@
 \usepackage{hyperref}
 \usepackage[margin=.5in]{geometry}
 \usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[french]{babel}
+\usepackage{natbib}
+
+\pagestyle{fancy}
+
+\textheight 26cm      
+\textwidth 18.0cm      
+\oddsidemargin 1.5cm            
+\evensidemargin 1.5cm          
+\addtolength{\oddsidemargin}{-2.5cm}
+\addtolength{\evensidemargin}{-2.5cm}
+\topmargin 0 cm      
+\addtolength{\topmargin}{-2cm}  
+
+\fancyhfoffset[L]{0.1in} % Ajuster la marge gauche de l'en-tête
+\fancyhfoffset[R]{0.1in} % Ajuster la marge droite de l'en-tête
+
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[R]{Année universitaire: 2024-2025}
+\fancyhead[L]{Bourgouin Raphaël - Dumarchat Joan - Gouedard Anna}
+
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot[C]{\thepage} 
+\fancyfoot[L]{ENSEIRB-MATMECA}
+\fancyfoot[R]{Traitement de l'information}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+

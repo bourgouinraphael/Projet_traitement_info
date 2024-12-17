@@ -1,11 +1,26 @@
-\documentclass{article}
+\documentclass[a4paper,notitlepage]{article}
 
-\include{preamble.sty}
+\usepackage{preamble}
 
 \begin{document}
 
+\include{title_page}
+
+\newpage
+\thispagestyle{empty}
+
+\tableofcontents
+
+\listoffigures
+
+\newpage
+\setcounter{page}{1}
+
 \section{Présentation de la méthode utilisée: AFC}
 
-\input{methode.tex}
+\input{methode}
+
+\bibliographystyle{plain}
+\bibliography{references}
 
 \end{document}
