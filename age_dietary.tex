@@ -37,13 +37,31 @@ Ainsi, nous avons quand même décidé de poursuivre l'analyse car cette p-valeu
 \subsubsection{Valeurs propres et cercle des corrélations}
 
 Après exécution de l'AFC, les deux composantes principales obtenues expliquent $100\%$ de la variance, avec la première en expliquant $\approx 97\%$.
-Ainsi, la quasi totalité des corrélations seront montrées par la première composante, soit l'axe des abscisses du cercle des corrélations donné en figure \ref{fig:corrAgeDiretary}.
+Ainsi, la quasi totalité des corrélations seront montrées par la première composante, soit l'axe des abscisses du cercle des corrélations donné en figure \ref{fig:corrAgeDietary}.
 
 \begin{figure}[!h]
   \begin{center}
     \includegraphics[width=0.55\textwidth]{Images/Age_Dietary_all/Corr_circle.png}
   \end{center}
   \caption{Cercle des corrélations de l'AFC sur les tranches d'âges et les habitudes alimentaires}
-  \label{fig:corrAgeDiretary}
+  \label{fig:corrAgeDietary}
+\end{figure}
+
+Sur la figure \ref{fig:corrAgeDietary}, on peut constater 2 légères tendances\footnote{Nous insistons vraiment sur le fait que ces corrélations sont faibles et ne représentent qu'au plus des légères tendances}:
+\begin{itemize}
+  \item Les plus de 30 ans ont tendance à avoir une alimentation modérée 
+  \item Les 26-30 ans et 22-26 ans tendent quand à eux vers une alimentation plutôt mauvaise pour la santé
+\end{itemize}
+
+Cette tendance se confirme en regardant la contribution de chaque catégorie sur les composantes principales.
+En effet, comme on peut le voir sur la figure \ref{fig:contribAgeDietary}, la première composante dépend des catégories Moderate et Unhealthy de manière approximativement égale, et la figure \ref{fig:corrAgeDietary} montre en complément que Moderate y contribue positivement et Unhealthy y contribue négativement. 
+Ainsi, l'analyse de correspondance a classé les tranches d'ages selon le nombre d'individus ayant un régime modéré moins le nombre d'individus ayant un régime mauvais pour la santé. 
+
+\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{Images/Age_Dietary_all/RowColumnsContributions.png}
+  \end{center}
+  \caption{Contribution des catégories dans les composantes principales}
+  \label{fig:contribAgeDietary}
 \end{figure}
 
