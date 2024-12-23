@@ -35,13 +35,13 @@ On définit alors $X = (x_{ij})_{1 \leq i \leq I, 1 \leq j \leq J}$ la table de 
 
 \begin{equation}
   x_{i\bullet} = \sum_{j=1}^J x_{ij} \qquad 
-  x_{\bullet j} = \sum_{i=1}^I x_{ij}
+  x_{\bullet j} = \sum_{i=1}^I x_{ij}.
 \end{equation}
 
 Cepandant, on préfèrera toujours travailler sur la table des probabilités définie par $f_{ij} = \frac{x_{ij}}{n}$, pour lesquelles on peut aussi définir les valeurs marginales avec: 
 \begin{equation}
   f_{i\bullet} = \sum_{j=1}^J f_{ij} \qquad
-  f_{\bullet j} = \sum_{i=1}^I f_{ij}
+  f_{\bullet j} = \sum_{i=1}^I f_{ij}.
 \end{equation}
 
 \subsection{Test d'indépendance}
@@ -60,7 +60,7 @@ On peut alors procéder au test d'indépendance $\chi^2$, qui consiste à:
 
 \subsection{Diagonalisation}
 
-Maintenant que l'on a confirmé que les variables sont corrélées, nous pouvons utiliser une technique plus précise afin d'obtenir plus d'informations, à savoir ici la diagonaliser la matrice des probabilités.
+Maintenant que l'on a confirmé que les variables sont corrélées, nous pouvons utiliser une technique plus précise afin d'obtenir plus d'informations, à savoir ici la diagonaliser la matrice des probabilités $F = (f_{ij})$.
 
 On suppose ici qu'étudier $F$ reviens à étudier $\tilde{F} = D_IFD_J$ avec $D_I = diag(\frac{1}{\sqrt{f_{1 \bullet}}}, \dots, \frac{1}{\sqrt{f_{I\bullet}}})$ et $D_J = diag(\frac{1}{\sqrt{f_{\bullet 1}}}, \dots, \frac{1}{\sqrt{f_{\bullet J}}})$.
 On réalisera 2 diagonalisations, une sur $\tilde{F}\tilde{F}^T$ pour étudier les lignes et une sur $\tilde{F}^T\tilde{F}$ pour étudier les colonnes.
