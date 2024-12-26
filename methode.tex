@@ -1,5 +1,6 @@
 L'Analyse Factorielle de Correspondance est une technique permettant d'analyser des données qualitatives. 
-Plus précisément, elle permet d'analyser les relations entre 2 variables qualitatives catégorielles. Un représentation commune de ces données est la table de contingence, pour lequel un exemple est fourni dans la figure \ref{cont-table}. 
+Plus précisément, elle permet d'analyser les relations entre 2 variables qualitatives catégorielles.
+Une représentation commune de ces données est la table de contingence, pour laquelle un exemple est fourni dans la figure \ref{cont-table}. 
 
 \begin{figure}[!h]
 \begin{center}
@@ -38,7 +39,7 @@ On définit alors $X = (x_{ij})_{1 \leq i \leq I, 1 \leq j \leq J}$ la table de 
   x_{\bullet j} = \sum_{i=1}^I x_{ij}.
 \end{equation}
 
-Cepandant, on préfèrera toujours travailler sur la table des probabilités définie par $f_{ij} = \frac{x_{ij}}{n}$, pour lesquelles on peut aussi définir les valeurs marginales avec: 
+Cependant, on préfèrera toujours travailler sur la table des probabilités définie par $f_{ij} = \frac{x_{ij}}{n}$, pour lesquelles on peut aussi définir les valeurs marginales avec: 
 \begin{equation}
   f_{i\bullet} = \sum_{j=1}^J f_{ij} \qquad
   f_{\bullet j} = \sum_{i=1}^I f_{ij}.
@@ -55,16 +56,16 @@ On peut alors procéder au test d'indépendance $\chi^2$, qui consiste à:
   \item Fixer une $p$-value (usuellement à $0.05$)
   \item Calculer le degré de liberté $df = (I - 1)(J - 1)$ 
   \item Déterminer $\chi_{critical}^2$ ou une $p$-valeur à l'aide d'une table 
-  \item Si $\chi_{obs}^2 \leq \chi_{critical}^2$ ou $p$-valeur $\geq 5\%$ alors les variables sont indépendantes, sinon elles sont corrélées
+  \item Si $\chi_{obs}^2 \leq \chi_{critical}^2$ ou $p$-valeur $\geq 5\%$ alors les variables sont indépendantes. Sinon elles sont corrélées
 \end{itemize}
 
 \subsection{Diagonalisation}
 
-Maintenant que l'on a confirmé que les variables sont corrélées, nous pouvons utiliser une technique plus précise afin d'obtenir plus d'informations, à savoir ici la diagonaliser la matrice des probabilités $F = (f_{ij})$.
+Maintenant que l'on a confirmé que les variables sont corrélées, nous pouvons utiliser une technique plus précise afin d'obtenir plus d'informations, à savoir ici la diagonalisation de la matrice des probabilités $F = (f_{ij})$.
 
-On suppose ici qu'étudier $F$ reviens à étudier $\tilde{F} = D_IFD_J$ avec $D_I = diag(\frac{1}{\sqrt{f_{1 \bullet}}}, \dots, \frac{1}{\sqrt{f_{I\bullet}}})$ et $D_J = diag(\frac{1}{\sqrt{f_{\bullet 1}}}, \dots, \frac{1}{\sqrt{f_{\bullet J}}})$.
+On suppose ici qu'étudier $F$ revient à étudier $\tilde{F} = D_IFD_J$ avec $D_I = diag(\frac{1}{\sqrt{f_{1 \bullet}}}, \dots, \frac{1}{\sqrt{f_{I\bullet}}})$ et $D_J = diag(\frac{1}{\sqrt{f_{\bullet 1}}}, \dots, \frac{1}{\sqrt{f_{\bullet J}}})$.
 On réalisera 2 diagonalisations, une sur $\tilde{F}\tilde{F}^T$ pour étudier les lignes et une sur $\tilde{F}^T\tilde{F}$ pour étudier les colonnes.
 On représente ensuite chaque catégorie de $V_1$ et $V_2$ dans un cercle des corrélations à la manière de l'ACP.
-Une propriété importante ici est le fait que les valeurs propres issues des 2 diagonalisations sont identiques, ce qui va nous permettre de représenter sur le même cercle les 2 variables. Dans ce graphique, si une catégorie de $V_1$ et de $V_2$ sont proches tout en étant éloignées de l'origine, cela montrera une corrélation entre cess deux catégories.
+Une propriété importante ici est le fait que les valeurs propres issues des 2 diagonalisations sont identiques, ce qui va nous permettre de représenter sur le même cercle les 2 variables. Dans ce graphique, si une catégorie de $V_1$ et de $V_2$ est proche tout en étant éloignée de l'origine, cela montrera une corrélation entre ces deux catégories.
 
 On pourra aussi calculer la contribution de chaque ligne/colonne dans les composantes principales afin de mieux interpréter les résultats.
